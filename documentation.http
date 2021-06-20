@@ -1,0 +1,96 @@
+### signup checking
+POST http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+    "username": "rushikanalamwar",
+    "email": "rushika@gmail.com",
+    "password":"rushikan"
+}
+
+###login checking
+POST http://localhost:4000/auth/login 
+Content-Type: application/json
+
+{
+    "username": "rushikanalamwar",
+    "email": "rushika@gmail.com",
+    "password":"rushikan"
+}
+
+###get all users 
+GET http://localhost:4000/auth/
+
+###get all users 
+GET http://localhost:4000/auth/user/60c5164cb8cc0731e337ea3c
+
+###get all users COUNT 
+GET http://localhost:4000/auth/allCount
+
+
+###########################SERVICES HERE#####################################
+
+### add service 
+POST http://localhost:4000/service/add
+Content-Type: application/json
+
+{
+    "service":"covid essentials"
+}
+
+###update service 
+POST http://localhost:4000/service/update/60c530aaff7ce43de904b683
+Content-Type: application/json
+
+{
+    "service":"foods"
+}
+
+###get all services 
+GET http://localhost:4000/service/all
+
+###get all services count
+GET http://localhost:4000/service/allCount
+
+
+### add hotel
+POST http://localhost:4000/hotel/add
+Content-Type: application/json
+
+{
+    "userId": "60c5164cb8cc0731e337ea3c",
+    "hotel": "taj",
+    "location": "mumbai",
+    "hotelService":[{
+        "service": "room cleaning"
+    },
+    {
+        "service": "laundry"
+    }]
+
+}
+
+###get all hotels 
+GET http://localhost:4000/hotel/all/
+
+###get single 
+GET http://localhost:4000/hotel/countService/60c5412a193a654d35091d13
+
+###delete hotel
+POST http://localhost:4000/hotel/delete/60c5412a193a654d35091d13
+
+###update hotel
+POST http://localhost:4000/hotel/update/60c541c3fdcf334dba3e1bcd
+Content-Type: application/json
+
+{
+    "hotel": "raddison",
+    "location": "delhi",
+    "hotelService":[{
+        "service": "room cleaning"
+    },
+    {
+        "service": "laundry"
+    }]
+
+}
